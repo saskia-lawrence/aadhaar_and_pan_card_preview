@@ -153,16 +153,6 @@ export default function AadharFormart({ detail, setDetail }) {
         <div>
           <h1>Pan Card</h1>
           <form action="">
-            <label htmlFor="text">Name : </label>
-            <input
-              type="text"
-              name="persons_name"
-              placeholder="Name"
-              value={detail.persons_name}
-              onChange={eventHandler}
-            />
-            <br />
-            <br />
             <label htmlFor="text">Pan No : </label>
             <input
               type="text"
