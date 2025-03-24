@@ -1,0 +1,36 @@
+/* Full container for the layout */
+.form-and-preview-container {
+  display: flex; /* Arrange items horizontally */
+  justify-content: flex-start; /* Align items starting from the left */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px; /* Adds padding around the layout */
+  gap: 20px; /* Space between the form and cards */
+}
+
+/* Form container styling */
+.form-container {
+  flex: 1; /* Takes up proportional width */
+  max-width: 50%; /* Restricts the width of the form */
+  padding:10px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas: ". .";
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+}
+
+/* For presentation only, no need to copy the code below */
