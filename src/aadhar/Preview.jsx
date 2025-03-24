@@ -4,7 +4,8 @@ import "identity-card/dist/styles.css";
 import "./style.css";
 
 export default function Preview({ detail, setDetail }) {
-  let gender = detail.male_gender === true ? "Male" : "Female";
+  let maleGender = detail.male_gender ? "Male" : "";
+  let femaleGender = detail.female_gender ? "Female" : "";
   return (
     <div>
       <div style={{ margin: "20px" }}>
@@ -13,7 +14,7 @@ export default function Preview({ detail, setDetail }) {
         <AadhaarCard
           name={detail.person_name}
           dob={detail.dob}
-          gender={gender}
+          gender={maleGender || femaleGender || ""}
           number={detail.aadhaar_no}
           image={detail.photoUrl}
           address={detail.address}
