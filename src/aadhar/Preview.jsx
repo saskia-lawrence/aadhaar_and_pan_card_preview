@@ -26,7 +26,7 @@ export default function Preview({ detail, setDetail }) {
         />
       </div>
       <div style={{ margin: "20px" }}>
-        <PanCard name={detail.persons_name} number={detail.pan_no} />
+        <PanCard name={detail.person_name} number={detail.pan_no} />
       </div>
     </div>
   );
