@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./style.css";
 
 export default function AadharFormart({ detail, setDetail }) {
+  const myRef = useRef();
+
   function eventHandler({ target }) {
     let name = target.name;
     let value = target.value;
@@ -40,6 +42,11 @@ export default function AadharFormart({ detail, setDetail }) {
     });
   }
 
+  useEffect(() => {
+    let inputElm = myRef.current;
+    inputElm.focus();
+  }, []);
+
   return (
     <div className="form-and-preview-container">
       {" "}
@@ -53,6 +60,7 @@ export default function AadharFormart({ detail, setDetail }) {
             name="person_name"
             placeholder="Name"
             value={detail.person_name}
+            ref={myRef}
             onChange={eventHandler}
           />
           <br />
